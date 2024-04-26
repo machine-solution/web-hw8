@@ -1,0 +1,45 @@
+main {
+    display: grid;
+    grid-template-rows: 30px auto;
+}
+
+.results {
+    display: grid;
+    column-gap: 14px;
+    row-gap: 14px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 50px;
+    justify-content: space-around;
+}
+
+form {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 300px 70px;
+}
+  
+input[type="text"] {
+    border: solid 1px var(--primary-color);
+    padding: 10px;
+    border-radius: 8px;
+    margin-right: 4px;
+    display: inline-block;
+}
+  
+@media (min-width: 1000px) and (max-width: 1500px) {
+    .results {
+        grid-template-columns: repeat(3, 1fr);
+    } 
+}
+  
+@media (min-width: 500px) and (max-width: 999px) {
+    .results {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}
+  
+@media (max-width: 499px) {
+    .results {
+        grid-template-columns: repeat(1, 1fr);
+    }    
+}
